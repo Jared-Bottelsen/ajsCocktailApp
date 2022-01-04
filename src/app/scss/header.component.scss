@@ -1,8 +1,25 @@
-.test {
-    color: blue;
-    font-size: 5rem;
+.header-banner-background {
+    background-image: url('../../../assets/paolo-bendandi-2kLHSCnMQZ8-unsplash.jpg');
+    opacity: 0.85;
+    background-size: cover;
+    height: 20vh;
 }
 
-.testing {
-    display: block;
+.header-banner {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__text-container {
+        width: fit-content;
+        text-align: center;
+        padding: 2rem;
+        background-color: #fbdcbe9f;
+        border-radius: 1rem;
+
+        &--text {
+            color: black;
+        }    
+    }
 }

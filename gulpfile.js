@@ -10,14 +10,14 @@ gulp.task('styles', () => {
 
 gulp.task('clean', () => {
     return del([
-        './dist/css',
+        'dist/css',
     ])
 })
 
 gulp.task('default', gulp.series(['clean', 'styles']));
 
 gulp.task('watch', () => {
-    gulp.watch('src/app/scss/main.scss', (done) => {
+    gulp.watch('src/app/scss/*.scss', (done) => {
         gulp.series(['clean', 'styles'])(done);
     });
 })
