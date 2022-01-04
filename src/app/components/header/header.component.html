@@ -1,3 +1,16 @@
 <div ng-controller="headerCtrl">
-    <p class="test">{{test}}</p>
+    <div class="header-banner-background">
+        <div class="header-banner">
+            <div class="header-banner__text-container">
+                <h1 class="header-banner__text-container--text">Cocktail Dictionary</h1>
+                <br>
+                <h3 class="header-banner__text-container--text">Find Your Favorite Cocktail</h3>  
+            </div>
+        </div>    
+    </div>
+    <button ng-click="getData()">Click Me</button>
+    <div ng-repeat="drink in drinks.drinks">
+        <p>{{drink.strDrink}}</p>
+        <img src="{{drink.strDrinkThumb}}" width="500" height="500" alt="">    
+    </div>
 </div>
