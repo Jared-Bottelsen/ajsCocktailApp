@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "http-server -o",
+    "serve": "http-server -a localhost -p 8080 -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
