@@ -5,16 +5,10 @@ function CocktailApiService($http) {
 
     return {
         getRandomCocktail: function() {
-            $http({
+            return $http({
                 method: 'GET',
                 url: 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
-            })
-            .then(function(response) {
-                return response;
-            })
-            .catch(function(error) {
-                console.error(error);
-            })
+            });
         }
-    };
+    }
 }

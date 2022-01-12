@@ -2,7 +2,12 @@ angular.module('appModule')
 .controller('cocktailInfoCtrl', ['$scope', 'ApiService', CocktailInformationController]);
 
 function CocktailInformationController($scope, ApiService) {
-    $scope.testing = ApiService.getRandomCocktail()
-    console.log($scope.testing);
-    console.log(ApiService.getRandomCocktail());
+    $scope.randomCocktailData = [];
+
+    let handleSuccess = function(data, status) {
+        $scope.randomCocktailData = data.data.drinks;
+        console.log($scope.randomCocktailData);
+    }
+
+    ApiService.getRandomCocktail().then(handleSuccess);
 };

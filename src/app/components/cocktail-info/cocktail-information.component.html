@@ -1,3 +1,6 @@
 <div ng-controller="cocktailInfoCtrl">
-    <p>{{testing}}</p>
+    <div ng-repeat="data in randomCocktailData">
+        <h1>{{data.strDrink}}</h1>
+        <img src="{{data.strDrinkThumb}}" height="200px" width="200px" alt="">
+    </div>
 </div>
