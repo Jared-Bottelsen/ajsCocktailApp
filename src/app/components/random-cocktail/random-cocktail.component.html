@@ -1,0 +1,55 @@
+<div ng-controller="randomCtrl">
+    <button ng-click="generateRandomCocktail()">Generate Random Cocktail</button>
+    <div ng-repeat="data in randomCocktailData">
+        <h1>Drink Name: {{data.strDrink}}</h1>
+        <div class="image-container">
+            <img src="{{data.strDrinkThumb}}" height="300px" width="300px" alt="">
+        </div>
+        <div class="ingredients">
+            <div class="ingredients__list">
+                <h2>Ingredients Needed:</h2>
+                <ol>
+                    <li ng-if="data.strIngredient1">{{data.strIngredient1}}</li>
+                    <li ng-if="data.strIngredient2">{{data.strIngredient2}}</li>
+                    <li ng-if="data.strIngredient3">{{data.strIngredient3}}</li>
+                    <li ng-if="data.strIngredient4">{{data.strIngredient4}}</li>
+                    <li ng-if="data.strIngredient5">{{data.strIngredient5}}</li>
+                    <li ng-if="data.strIngredient6">{{data.strIngredient6}}</li>
+                    <li ng-if="data.strIngredient7">{{data.strIngredient7}}</li>
+                    <li ng-if="data.strIngredient8">{{data.strIngredient8}}</li>
+                    <li ng-if="data.strIngredient9">{{data.strIngredient9}}</li>
+                    <li ng-if="data.strIngredient10">{{data.strIngredient10}}</li>
+                    <li ng-if="data.strIngredient11">{{data.strIngredient11}}</li>
+                    <li ng-if="data.strIngredient12">{{data.strIngredient12}}</li>
+                    <li ng-if="data.strIngredient13">{{data.strIngredient13}}</li>
+                    <li ng-if="data.strIngredient14">{{data.strIngredient14}}</li>
+                    <li ng-if="data.strIngredient15">{{data.strIngredient15}}</li>
+                </ol>    
+            </div>
+            <div class="ingredients__quantities">
+                <h2>Measurements</h2>
+                <ol>
+                    <li ng-if="data.strMeasure1">{{data.strMeasure1}}</li>
+                    <li ng-if="data.strMeasure2">{{data.strMeasure2}}</li>
+                    <li ng-if="data.strMeasure3">{{data.strMeasure3}}</li>
+                    <li ng-if="data.strMeasure4">{{data.strMeasure4}}</li>
+                    <li ng-if="data.strMeasure5">{{data.strMeasure5}}</li>
+                    <li ng-if="data.strMeasure6">{{data.strMeasure6}}</li>
+                    <li ng-if="data.strMeasure7">{{data.strMeasure7}}</li>
+                    <li ng-if="data.strMeasure8">{{data.strMeasure8}}</li>
+                    <li ng-if="data.strMeasure9">{{data.strMeasure9}}</li>
+                    <li ng-if="data.strMeasure10">{{data.strMeasure10}}</li>
+                    <li ng-if="data.strMeasure11">{{data.strMeasure11}}</li>
+                    <li ng-if="data.strMeasure12">{{data.strMeasure12}}</li>
+                    <li ng-if="data.strMeasure13">{{data.strMeasure13}}</li>
+                    <li ng-if="data.strMeasure14">{{data.strMeasure14}}</li>
+                    <li ng-if="data.strMeasure15">{{data.strMeasure15}}</li>
+                </ol>
+            </div>
+        </div>
+        <div class="description-container">
+            <h2>Instructions</h2>
+            <p>{{data.strInstructions}}</p>
+        </div>
+    </div>
+</div>
